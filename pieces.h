@@ -214,6 +214,32 @@ class Knight: public Piece{
 
 };
 
+
+class Pawn: public Piece{
+
+    /*
+    Pawn Class: pawns move forwards only
+    */
+
+    public:
+        string Name = "Pawn";
+        int value   = 1;
+        vector<vector<int>> AllMoves = generate_possible_moves();
+
+        Pawn(string input_colour, int x0, int y0):Piece(input_colour,x0,y0){}
+
+        vector<vector<int>> generate_possible_moves(){
+            vector<vector<int>> possible_moves;
+
+            possible_moves.push_back(vector<int> {X_position+1,Y_position+1});
+            possible_moves.push_back(vector<int> {X_position,Y_position+1});
+            possible_moves.push_back(vector<int> {X_position-1,Y_position+1});
+       
+        return possible_moves;       
+        }
+
+};
+
 class King: public Piece{
 
     public:

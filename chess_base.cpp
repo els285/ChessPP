@@ -1,9 +1,13 @@
 #include <string>
 #include <iostream>
 #include<vector>
+#include <any>
+
+
 #include "pieces.h"
 #include "game.h"
 #include "algebra.h"
+
 
 using std::string;
 using std::vector;
@@ -12,9 +16,15 @@ using std::vector;
 
 int main(){
 
+    std::cout << __cplusplus << std::endl;
+
     Game Game1;
-    string out = Translator::translate_position_to_algebra(vector<int> {4,3});
-    std::cout << out << std::endl;
+
+    Game1.initialise_pieces();
+
+    std::cout << Game1.white_pieces.size() << std::endl;
+    // string out = Translator::translate_position_to_algebra(vector<int> {4,3});
+    // std::cout << out << std::endl;
 
 
 

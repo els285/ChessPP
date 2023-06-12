@@ -13,7 +13,6 @@ using std::map;
 
 namespace Translator{
    
-
 string translate_position_to_algebra(vector<int> position){
 
     map<int, string> Trans_Dict;
