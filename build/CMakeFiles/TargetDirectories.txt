@@ -1,0 +1,3 @@
+/Users/ethansimpson/ChessPP/build/CMakeFiles/c1.dir
+/Users/ethansimpson/ChessPP/build/CMakeFiles/edit_cache.dir
+/Users/ethansimpson/ChessPP/build/CMakeFiles/rebuild_cache.dir
