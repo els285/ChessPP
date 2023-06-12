@@ -1,5 +1,5 @@
-#ifndef Chess_Pieces
-#define Chess_Pieces
+#ifndef ChessPieces
+#define ChessPieces
 
 #include <string>
 #include <iostream>
