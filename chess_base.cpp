@@ -3,6 +3,7 @@
 #include<vector>
 #include "pieces.h"
 #include "game.h"
+#include "algebra.h"
 
 using std::string;
 using std::vector;
@@ -12,16 +13,20 @@ using std::vector;
 int main(){
 
     Game Game1;
+    string out = Translator::translate_position_to_algebra(vector<int> {4,3});
+    std::cout << out << std::endl;
 
-    // Game1.Whi
-    Queen WhiteQueen("white",1,0);
-    WhiteQueen.generate_possible_moves();
 
-    vector<vector<int>> po = WhiteQueen.AllMoves;
 
-    for(int i=0; i<po.size();i++){
-        std::cout << po[i][0] << "   " << po[i][1] <<std::endl;
-    }
+    // // Game1.Whi
+    // Knight WhiteKnight("white",7,7);
+    // WhiteKnight.generate_possible_moves();
+
+    // vector<vector<int>> po = WhiteKnight.AllMoves;
+
+    // for(int i=0; i<po.size();i++){
+    //     std::cout << po[i][0] << "   " << po[i][1] <<std::endl;
+    // }
 
 
     // for(vector i : po){ 

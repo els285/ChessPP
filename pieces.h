@@ -39,33 +39,7 @@ class Piece{
 
 };
 
-class King: public Piece{
 
-    public:
-
-        string Name = "King";
-        vector<vector<int>> AllMoves = generate_possible_moves();
-
-        King(string input_colour, int x0, int y0):Piece(input_colour,x0,y0){}
-
-        // Function for generating possible King moves
-        vector<vector<int>> generate_possible_moves(){
-            vector<vector<int>> possible_moves;
-
-            for(int i=-1; i<2; i++){
-                for(int j=-1; j<2; j++){
-
-                    int Xnew = X_position + i;
-                    int Ynew = Y_position + j;
-                    if (Xnew >= 0 && Xnew <=7 && Ynew >= 0 && Ynew <=7){
-                        vector<int> Vnew = {Xnew,Ynew};
-                        possible_moves.push_back(Vnew);
-                    }
-                };
-            }
-            return possible_moves;
-        }
-};
 
 
 // Function for generating bishop-like moves
@@ -175,6 +149,97 @@ class Queen: public Piece{
     }
 };
 
+class Knight: public Piece{ 
 
+    public:
+
+        string Name = "Knight";
+        int value   = 3;
+        vector<vector<int>> AllMoves = generate_possible_moves();
+
+        Knight(string input_colour, int x0, int y0):Piece(input_colour,x0,y0){}
+
+        vector<vector<int>> generate_possible_moves(){
+            vector<vector<int>> possible_moves;
+
+            possible_moves.push_back(vector<int> {X_position,Y_position});
+
+            if (   X_position+2 >= 0 && X_position+2 <= 7
+                && Y_position+1 >= 0 && Y_position+1 <= 7){
+                    possible_moves.push_back(vector<int> {X_position+2,Y_position+1});
+            };
+
+            if (   X_position+1 >= 0 && X_position+1 <= 7
+                && Y_position+2 >= 0 && Y_position+2 <= 7){
+                    possible_moves.push_back(vector<int> {X_position+1,Y_position+2});
+            };
+
+            if (   X_position-1 >= 0 && X_position-1 <= 7
+                && Y_position+2 >= 0 && Y_position+2 <= 7){
+                    possible_moves.push_back(vector<int> {X_position-1,Y_position+2});
+            };
+
+            if (   X_position-2 >= 0 && X_position-2 <= 7
+                && Y_position+1 >= 0 && Y_position+1 <= 7){
+                    possible_moves.push_back(vector<int> {X_position-2,Y_position+1});
+            };
+
+            if (   X_position+2 >= 0 && X_position+2 <= 7
+                && Y_position-1 >= 0 && Y_position-1 <= 7){
+                    possible_moves.push_back(vector<int> {X_position+2,Y_position-1});
+            };
+
+            if (   X_position+1 >= 0 && X_position+1 <= 7
+                && Y_position-2 >= 0 && Y_position-2 <= 7){
+                    possible_moves.push_back(vector<int> {X_position+1,Y_position-2});
+            };
+
+            if (   X_position-1 >= 0 && X_position-1 <= 7
+                && Y_position-2 >= 0 && Y_position-2 <= 7){
+                    possible_moves.push_back(vector<int> {X_position-1,Y_position-2});
+            };
+
+            if (   X_position-2 >= 0 && X_position-2 <= 7
+                && Y_position-1 >= 0 && Y_position-1 <= 7){
+                    possible_moves.push_back(vector<int> {X_position-2,Y_position-1});
+            };
+
+        return possible_moves;
+        }
+
+
+
+
+
+
+};
+
+class King: public Piece{
+
+    public:
+
+        string Name = "King";
+        vector<vector<int>> AllMoves = generate_possible_moves();
+
+        King(string input_colour, int x0, int y0):Piece(input_colour,x0,y0){}
+
+        // Function for generating possible King moves
+        vector<vector<int>> generate_possible_moves(){
+            vector<vector<int>> possible_moves;
+
+            for(int i=-1; i<2; i++){
+                for(int j=-1; j<2; j++){
+
+                    int Xnew = X_position + i;
+                    int Ynew = Y_position + j;
+                    if (Xnew >= 0 && Xnew <=7 && Ynew >= 0 && Ynew <=7){
+                        vector<int> Vnew = {Xnew,Ynew};
+                        possible_moves.push_back(Vnew);
+                    }
+                };
+            }
+            return possible_moves;
+        }
+};
 
 #endif
