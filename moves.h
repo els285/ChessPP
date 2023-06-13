@@ -9,7 +9,7 @@
 using std::string;
 using std::vector;
 
-
+namespace Moves{
 // Function for generating bishop-like moves
 vector<vector<int>> generate_bishop_moves(int X_position,int Y_position){
     vector<vector<int>> possible_moves;
@@ -135,10 +135,9 @@ return possible_moves;
 }
 
 
-
-
 // Function for generating possible King moves
 vector<vector<int>> generate_king_moves(int X_position, int Y_position){
+
     vector<vector<int>> possible_moves;
 
     for(int i=-1; i<2; i++){
@@ -152,7 +151,12 @@ vector<vector<int>> generate_king_moves(int X_position, int Y_position){
             }
         };
     }
+
     return possible_moves;
 }
+
+};
+
+
 
 #endif

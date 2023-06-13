@@ -419,6 +419,7 @@ CMakeFiles/c1.dir/chess_base.cpp.o: /Users/ethansimpson/ChessPP/chess_base.cpp \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__split_buffer \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/any \
   /Users/ethansimpson/ChessPP/pieces.h \
+  /Users/ethansimpson/ChessPP/moves.h \
   /Users/ethansimpson/ChessPP/game.h \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/map \
   /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__functional/is_transparent.h \
@@ -433,6 +434,8 @@ CMakeFiles/c1.dir/chess_base.cpp.o: /Users/ethansimpson/ChessPP/chess_base.cpp \
 /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX12.3.sdk/usr/include/c++/v1/__tree:
 
 /Users/ethansimpson/ChessPP/game.h:
+
+/Users/ethansimpson/ChessPP/moves.h:
 
 /Users/ethansimpson/ChessPP/pieces.h:
 

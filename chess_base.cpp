@@ -1,8 +1,7 @@
 #include <string>
 #include <iostream>
-#include<vector>
+#include <vector>
 #include <any>
-
 
 #include "pieces.h"
 #include "game.h"
@@ -16,18 +15,24 @@ using std::vector;
 
 int main(){
 
-    std::cout << __cplusplus << std::endl;
 
     Game Game1;
 
     Game1.initialise_pieces();
 
-    std::cout << Game1.white_pieces.size() << std::endl;
+    // Game1.board_positions();
+
+    // std::cout << Game1.white_pieces["P0"].X_position << std::endl;
     // string out = Translator::translate_position_to_algebra(vector<int> {4,3});
     // std::cout << out << std::endl;
 
 
+    // Piece WhiteKing(PieceType::KING,Colour::WHITE,3,0);
 
+    // vector<vector<int>> out  =  WhiteKing.generate_all_possible_moves();
+
+
+    // std::cout << out.size() << std::endl;
     // // Game1.Whi
     // Knight WhiteKnight("white",7,7);
     // WhiteKnight.generate_possible_moves();
